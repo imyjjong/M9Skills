@@ -1,0 +1,144 @@
+{
+    "products": [
+        {
+            "id": 0,
+            "image": "src/img/skateboard.png",
+            "name": "skateboard",
+            "price": 24.50,
+            "blue": "src/img/skateboard-blauw.png",
+            "blauw": 29.30,
+            "gold": "src/img/skateboard-goud.png",
+            "goud": 31,
+            "red": "src/img/skateboard-rood.png",
+            "rood": 26.25,
+            "silver": "src/img/skateboard-zilver.png",
+            "zilver": 29.98
+        },
+        {
+            "id": 1,
+            "image": "src/img/schoen.png",
+            "name": "schoen",
+            "price": 20.05,
+            "blue": "src/img/schoen-blauw.png",
+            "blauw": 21.95,
+            "gold": "src/img/schoen-goud.png",
+            "goud": 26.10,
+            "red": "src/img/schoen-rood.png",
+            "rood": 21,
+            "silver": "src/img/schoen-zilver.png",
+            "zilver": 24.30
+        },
+        {
+            "id": 2,
+            "image": "src/img/pet.png",
+            "name": "pet",
+            "price": 12.95,
+            "blue": "src/img/pet-blauw.png",
+            "blauw": 15,
+            "gold": "src/img/pet-goud.png",
+            "goud": 13.95,
+            "red": "src/img/pet-rood.png",
+            "rood": 16.15,
+            "silver": "src/img/pet-zilver.png",
+            "zilver": 18.25
+        }
+    ],
+    "symbols": [
+        {
+            "image": "src/img/symbol-BAM.png",
+            "name": "BAM"
+        },
+        {
+            "image": "src/img/symbol-BANG.png",
+            "name": "BANG"
+        },
+        {
+            "image": "src/img/symbol-BOO.png",
+            "name": "BOO"
+        },
+        {
+            "image": "src/img/symbol-BOOM!.png",
+            "name": "BOOM!"
+        },
+        {
+            "image": "src/img/symbol-LOL.png",
+            "name": "LOL"
+        },
+        {
+            "image": "src/img/symbol-OH.png",
+            "name": "OH"
+        },
+        {
+            "image": "src/img/symbol-OMG!.png",
+            "name": "OMG!"
+        },
+        {
+            "image": "src/img/symbol-POW.png",
+            "name": "POW"
+        },
+        {
+            "image": "src/img/symbol-WOW.png",
+            "name": "WOW"
+        }
+    ],
+    "header": [
+        {
+            "title": "Products",
+            "link": "#products"
+        }
+    ],
+    "skateboard": [
+        {
+            "color": "Blue",
+            "image": "src/img/skateboard-blauw/png"
+        },
+        {
+            "color": "Gold",
+            "image": "src/img/skateboard-goud/png"
+        },
+        {
+            "color": "Red",
+            "image": "src/img/skateboard-rood/png"
+        },
+        {
+            "color": "Silver",
+            "image": "src/img/skateboard-zilver/png"
+        }
+    ],
+    "schoen": [
+        {
+            "color": "Blue",
+            "image": "src/img/schoen-blauw/png"
+        },
+        {
+            "color": "Gold",
+            "image": "src/img/schoen-goud/png"
+        },
+        {
+            "color": "Red",
+            "image": "src/img/schoen-rood/png"
+        },
+        {
+            "color": "Silver",
+            "image": "src/img/schoen-zilver/png"
+        }
+    ],
+    "pet": [
+        {
+            "color": "Blue",
+            "image": "src/img/pet-blauw/png"
+        },
+        {
+            "color": "Gold",
+            "image": "src/img/pet-goud/png"
+        },
+        {
+            "color": "Red",
+            "image": "src/img/pet-rood/png"
+        },
+        {
+            "color": "Silver",
+            "image": "src/img/pet-zilver/png"
+        }
+    ]
+}
