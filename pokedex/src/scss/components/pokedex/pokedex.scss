@@ -14,14 +14,13 @@
         width: 100%;
         height: 10%;
         @include mixins.flexBox;
-        background: pink;
 
         &--input{
             border-radius: 2rem;
             padding: 1rem 2rem;
             width: 40rem;
             border: none;
-            background: rgb(247, 213, 219);
+            background: rgba(map-get(variables.$baseVars, "background"), 0.1);
             font-size: 100%;
 
             &:focus{
@@ -49,7 +48,7 @@
             width: 28rem;
             aspect-ratio: 1/1;
             @include mixins.flexBox;
-            border: 0.1rem solid grey;
+            border: 0.1rem solid map-get(variables.$pokedexVars, "grey");
             border-radius: 4rem;
 
             &-image{
@@ -67,17 +66,78 @@
             width: 100%;
             @include mixins.flexBox;
             font-size: 160%;
+            text-transform: capitalize;
         }
         &--types{
             @include mixins.flexBox;
             gap: 1rem;
         }
         &--type{
-            background: purple;
             padding: 0.6rem 2rem;
             border-radius: 2rem;
             @include mixins.flexBox;
-            color: white;
+            color: map-get(variables.$typesVars, "color");
+
+            &-normal{
+                background: map-get(variables.$typesVars, "normal");
+            }
+            &-fighting{
+                background: map-get(variables.$typesVars, "fighting");
+            }
+            &-flying{
+                background: map-get(variables.$typesVars, "flying");
+            }
+            &-poison{
+                background: map-get(variables.$typesVars, "poison");
+            }
+            &-ground{
+                background: map-get(variables.$typesVars, "ground");
+            }
+            &-rock{
+                background: map-get(variables.$typesVars, "rock");
+            }
+            &-bug{
+                background: map-get(variables.$typesVars, "bug");
+            }
+            &-ghost{
+                background: map-get(variables.$typesVars, "ghost");
+            }
+            &-steel{
+                background: map-get(variables.$typesVars, "steel");
+            }
+            &-fire{
+                background: map-get(variables.$typesVars, "fire");
+            }
+            &-water{
+                background: map-get(variables.$typesVars, "water");
+            }
+            &-grass{
+                background: map-get(variables.$typesVars, "grass");
+            }
+            &-electric{
+                background: map-get(variables.$typesVars, "electric");
+            }
+            &-psychic{
+                background: map-get(variables.$typesVars, "psychic");
+            }
+            &-ice{
+                background: map-get(variables.$typesVars, "ice");
+            }
+            &-dragon{
+                background: map-get(variables.$typesVars, "dragon");
+            }
+            &-dark{
+                background: map-get(variables.$typesVars, "dark");
+            }
+            &-fairy{
+                background: map-get(variables.$typesVars, "fairy");
+            }
+            &-stellar{
+                background: map-get(variables.$typesVars, "stellar");
+            }
+            &-unknown{
+                background: map-get(variables.$typesVars, "unknown");
+            }
         }
     }
     &__stats{
@@ -91,14 +151,12 @@
         gap: 2rem;
 
         &--list{
-            overflow: hidden;
-            overflow-y: scroll;
             height: 70%;
             width: 100%;
         }
         &--item{
             width: 100%;
-            border-bottom: 0.1rem solid grey;
+            border-bottom: 0.1rem solid map-get(variables.$pokedexVars, "grey");
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -120,10 +178,19 @@
             overflow-y: scroll;
             height: 70%;
             width: 100%;
+
+            &::-webkit-scrollbar{
+                background: none;
+
+                &-thumb{
+                    background: map-get(variables.$pokedexVars, "grey");
+                    border-radius: 1rem;
+                }
+            }
         }
         &--item{
             width: 100%;
-            border-bottom: 0.1rem solid grey;
+            border-bottom: 0.1rem solid map-get(variables.$pokedexVars, "grey");
             display: flex;
             justify-content: space-between;
             align-items: center;

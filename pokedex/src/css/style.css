@@ -42,14 +42,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: pink;
 }
 .pokedex__search--input {
   border-radius: 2rem;
   padding: 1rem 2rem;
   width: 40rem;
   border: none;
-  background: rgb(247, 213, 219);
+  background: rgba(56, 1, 56, 0.1);
   font-size: 100%;
 }
 .pokedex__search--input:focus {
@@ -78,7 +77,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.1rem solid grey;
+  border: 0.1rem solid rgb(204, 202, 202);
   border-radius: 4rem;
 }
 .pokedex__info--figure-image {
@@ -99,6 +98,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 160%;
+  text-transform: capitalize;
 }
 .pokedex__info--types {
   display: flex;
@@ -107,13 +107,72 @@ body {
   gap: 1rem;
 }
 .pokedex__info--type {
-  background: purple;
   padding: 0.6rem 2rem;
   border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+}
+.pokedex__info--type-normal {
+  background: #B59F78;
+}
+.pokedex__info--type-fighting {
+  background: #003161;
+}
+.pokedex__info--type-flying {
+  background: #7AB2D3;
+}
+.pokedex__info--type-poison {
+  background: #3B1E54;
+}
+.pokedex__info--type-ground {
+  background: #493628;
+}
+.pokedex__info--type-rock {
+  background: #D8D2C2;
+}
+.pokedex__info--type-bug {
+  background: #117554;
+}
+.pokedex__info--type-ghost {
+  background: #D2E0FB;
+}
+.pokedex__info--type-steel {
+  background: #3C3D37;
+}
+.pokedex__info--type-fire {
+  background: #FF6600;
+}
+.pokedex__info--type-water {
+  background: #3A6D8C;
+}
+.pokedex__info--type-grass {
+  background: #626F47;
+}
+.pokedex__info--type-electric {
+  background: #257180;
+}
+.pokedex__info--type-psychic {
+  background: #605678;
+}
+.pokedex__info--type-ice {
+  background: #A2D2DF;
+}
+.pokedex__info--type-dragon {
+  background: #800000;
+}
+.pokedex__info--type-dark {
+  background: #181C14;
+}
+.pokedex__info--type-fairy {
+  background: #C63C51;
+}
+.pokedex__info--type-stellar {
+  background: #8C3061;
+}
+.pokedex__info--type-unknown {
+  background: #A0153E;
 }
 .pokedex__stats {
   width: 35%;
@@ -126,14 +185,12 @@ body {
   gap: 2rem;
 }
 .pokedex__stats--list {
-  overflow: hidden;
-  overflow-y: scroll;
   height: 70%;
   width: 100%;
 }
 .pokedex__stats--item {
   width: 100%;
-  border-bottom: 0.1rem solid grey;
+  border-bottom: 0.1rem solid rgb(204, 202, 202);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,9 +212,16 @@ body {
   height: 70%;
   width: 100%;
 }
+.pokedex__moves--list::-webkit-scrollbar {
+  background: none;
+}
+.pokedex__moves--list::-webkit-scrollbar-thumb {
+  background: rgb(204, 202, 202);
+  border-radius: 1rem;
+}
 .pokedex__moves--item {
   width: 100%;
-  border-bottom: 0.1rem solid grey;
+  border-bottom: 0.1rem solid rgb(204, 202, 202);
   display: flex;
   justify-content: space-between;
   align-items: center;

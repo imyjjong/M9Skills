@@ -5,5 +5,31 @@ $baseVars: (
 );
 
 $pokedexVars: (
-    "background": white
+    "background": white,
+    "grey": rgb(204, 202, 202),
+    "searchBackground": rgb(121, 10, 121)
+);
+
+$typesVars: (
+    "normal": #B59F78,
+    "fighting": #003161,
+    "flying": #7AB2D3,
+    "poison": #3B1E54,
+    "ground": #493628,
+    "rock": #D8D2C2,
+    "bug": #117554,
+    "ghost": #D2E0FB,
+    "steel": #3C3D37,
+    "fire": #FF6600,
+    "water": #3A6D8C,
+    "grass": #626F47,
+    "electric": #257180,
+    "psychic": #605678,
+    "ice": #A2D2DF,
+    "dragon": #800000,
+    "dark": #181C14,
+    "fairy": #C63C51,
+    "stellar": #8C3061,
+    "unknown": #A0153E,
+    "color": white
 );

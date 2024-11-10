@@ -8,7 +8,7 @@ function Search(){
         setId(event.target.children[0].value);
     }
     return(
-        <form onSubmit={(event) => {searchPokemon(event)}}>
+        <form onSubmit={(event) => {searchPokemon(event)}} className="pokedex__search">
             <input type="text" className="pokedex__search--input" />
         </form>
     );

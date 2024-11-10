@@ -12,7 +12,7 @@ function Pokedex(){
     }, [id]);
 
     const typesSets = data?.types?.map(type => 
-        <article className="pokedex__info--type" key={type.slot}>
+        <article className={`pokedex__info--type pokedex__info--type-${type.type.name}`} key={type.slot}>
             {type.type.name}
         </article>
     );
