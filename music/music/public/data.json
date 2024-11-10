@@ -1,0 +1,810 @@
+{
+    "music": [
+        {
+            "id": 0,
+            "title": "23",
+            "artist": "Reneé Rapp",
+            "image": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857",
+            "audio": "audio/snowangel/23.mp3",
+            "album": "Snow Angel"
+        },
+        {
+            "id": 1,
+            "title": "Back to the Old House",
+            "artist": "The Smiths",
+            "image": "https://i.scdn.co/image/ab67616d0000b273ed3953f8af1f764a146b7583",
+            "audio": "../audio/louderthanbombs/backtotheoldhouse.mp3",
+            "album": "Louder Than Bombs"
+        },
+        {
+            "id": 2,
+            "title": "There Is A Light That Never Goes Out",
+            "artist": "The Smiths",
+            "image": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9",
+            "audio": "../audio/thequeenisdead/theresalightthatnevergoesout.mp3",
+            "album": "The Queen Is Dead"
+        },
+        {
+            "id": 3,
+            "title": "How Soon Is Now?",
+            "artist": "The Smiths",
+            "image": "https://i.scdn.co/image/ab67616d0000b273786b44c75ebf915866523f5b",
+            "audio": "../audio/hatfulofhollow/howsoonisnow.mp3",
+            "album": "Hatful of Hollow"
+        },
+        {
+            "id": 4,
+            "title": "Let The Light In (feat. Father John Misty)",
+            "artist": "Lana Del Rey",
+            "image": "https://i.scdn.co/image/ab67616d0000b27359ae8cf65d498afdd5585634",
+            "audio": "../audio/didyouknowthattheresatunnelunderoceanblvd/letthelightin.mp3",
+            "album": "Did you know that there's a tunnel under Ocean Blvd"
+        },
+        {
+            "id": 5,
+            "title": "Honeymoon",
+            "artist": "Lana Del Rey",
+            "image": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a",
+            "audio": "../audio/honeymoon/honeymoon.mp3",
+            "album": "Honeymoon"
+        }
+    ],
+    "albums": [
+        {
+            "id": 0,
+            "title": "Snow Angel",
+            "artist": "Reneé Rapp",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857",
+            "artistimage": "https://i.scdn.co/image/ab6761610000e5eb4aed33b212aa2368af8818bf",
+            "year": 2023,
+            "release": "Album",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Talk Too Much",
+                    "audio": "../audio/snowangel/talktoomuch.mp3",
+                    "duration": "3:16",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 1,
+                    "title": "I Hate Boston",
+                    "audio": "../audio/snowangel/ihateboston.mp3",
+                    "duration": "2:54",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 2,
+                    "title": "Poison Poison",
+                    "audio": "../audio/snowangel/poisonpoison.mp3",
+                    "duration": "3:11",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 3,
+                    "title": "Gemini Moon",
+                    "audio": "../audio/snowangel/geminimoon.mp3",
+                    "duration": "2:40",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 4,
+                    "title": "Snow Angel",
+                    "audio": "../audio/snowangel/snowangel.mp3",
+                    "duration": "3:35",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 5,
+                    "title": "So What Now",
+                    "audio": "../audio/snowangel/sowhatnow.mp3",
+                    "duration": "2:50",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 6,
+                    "title": "The Wedding Song",
+                    "audio": "../audio/snowangel/theweddingsong.mp3",
+                    "duration": "3:03",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 7,
+                    "title": "Pretty Girls",
+                    "audio": "../audio/snowangel/prettygirls.mp3",
+                    "duration": "2:26",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 8,
+                    "title": "Tummy Hurts",
+                    "audio": "../audio/snowangel/tummyhurts.mp3",
+                    "duration": "2:48",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 9,
+                    "title": "I Wish",
+                    "audio": "../audio/snowangel/iwish.mp3",
+                    "duration": "3:43",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 10,
+                    "title": "Willow",
+                    "audio": "../audio/snowangel/willow.mp3",
+                    "duration": "2:41",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                },
+                {
+                    "id": 11,
+                    "title": "23",
+                    "audio": "../audio/snowangel/23.mp3",
+                    "duration": "3:22",
+                    "artist": "Reneé Rapp",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "AM",
+            "artist": "Arctic Monkeys",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+            "artistimage": "https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f",
+            "year": 2013,
+            "release": "Album",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Do I Wanna Know?",
+                    "audio": "../audio/am/doiwannaknow.mp3",
+                    "duration": "4:32",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 1,
+                    "title": "R U Mine?",
+                    "audio": "../audio/am/rumine.mp3",
+                    "duration": "3:21",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 2,
+                    "title": "One For The Road",
+                    "audio": "../audio/am/onefortheroad.mp3",
+                    "duration": "3:26",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 3,
+                    "title": "Arabella",
+                    "audio": "../audio/am/arabella.mp3",
+                    "duration": "3:27",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 4,
+                    "title": "I Want It All",
+                    "audio": "../audio/am/iwantitall.mp3",
+                    "duration": "3:05",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 5,
+                    "title": "No. 1 Party Anthem",
+                    "audio": "../audio/am/no1partyanthem.mp3",
+                    "duration": "4:03",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 6,
+                    "title": "Mad Sounds",
+                    "audio": "../audio/am/madsounds.mp3",
+                    "duration": "3:35",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 7,
+                    "title": "Fireside",
+                    "audio": "../audio/am/fireside.mp3",
+                    "duration": "3:01",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 8,
+                    "title": "Why'd You Only Call Me When You're High?",
+                    "audio": "../audio/am/whydyouonlycallmewhenyourehigh",
+                    "duration": "2:41",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 9,
+                    "title": "Snap Out Of It",
+                    "audio": "../audio/am/snapoutofit.mp3",
+                    "duration": "3:13",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 10,
+                    "title": "Knee Socks",
+                    "audio": "../audio/am/kneesocks.mp3",
+                    "duration": "4:17",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 11,
+                    "title": "I Wanna Be Yours",
+                    "audio": "../audio/am/iwannabeyours.mp3",
+                    "duration": "3:03",
+                    "artist": "Arctic Monkeys",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "The Queen Is Dead",
+            "artist": "The Smiths",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9",
+            "artistimage": "https://i.scdn.co/image/4bf08a9e6eea088b20d4092d1322bbd3f39ff9af",
+            "year": 1986,
+            "release": "Album",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "The Queen Is Dead",
+                    "audio": "../audio/thequeenisdead/thequeenisdead.mp3",
+                    "duration": "6:27",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 1,
+                    "title": "Frankly, Mr. Shankly",
+                    "audio": "../audio/thequeenisdead/franklymrshankly.mp3",
+                    "duration": "2:18",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 2,
+                    "title": "I Know It's Over",
+                    "audio": "../audio/thequeenisdead/iknowitsover.mp3",
+                    "duration": "5:49",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 3,
+                    "title": "Never Had One Ever",
+                    "audio": "../audio/thequeenisdead/neverhadoneever.mp3",
+                    "duration": "3:38",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 4,
+                    "title": "Cemetry Gates",
+                    "audio": "../audio/thequeenisdead/cemetrygates.mp3",
+                    "duration": "2:41",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 5,
+                    "title": "Bigmouth Strikes Again",
+                    "audio": "../audio/thequeenisdead/bigmouthstrikesagain.mp3",
+                    "duration": "3:13",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 6,
+                    "title": "The Boy with the Thorn in His Side",
+                    "audio": "../audio/thequeenisdead/theboywiththethorninhisside.mp3",
+                    "duration": "3:16",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 7,
+                    "title": "Vicar in a Tutu",
+                    "audio": "../audio/thequeenisdead/vicarinatutu.mp3",
+                    "duration": "2:24",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 8,
+                    "title": "There Is A Light That Never Goes Out",
+                    "audio": "../audio/thequeenisdead/theresalightthatnevergoesout.mp3",
+                    "duration": "4:05",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 9,
+                    "title": "Some Girls Are Bigger Than Others",
+                    "audio": "../audio/thequeenisdead/somegirlsarebiggerthanothers.mp3",
+                    "duration": "3:17",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Louder Than Bombs",
+            "artist": "The Smiths",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b273ed3953f8af1f764a146b7583",
+            "artistimage": "https://i.scdn.co/image/4bf08a9e6eea088b20d4092d1322bbd3f39ff9af",
+            "year": 1987,
+            "release": "Compilation",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Back to the Old House",
+                    "audio": "../audio/louderthanbombs/backtotheoldhouse.mp3",
+                    "duration": "3:07",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ed3953f8af1f764a146b7583"
+                },
+                {
+                    "id": 1,
+                    "title": "Heaven Knows I'm Miserable Now",
+                    "audio": "../audio/louderthanbombs/heavenknowsimmiserablenow.mp3",
+                    "duration": "3:36",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ed3953f8af1f764a146b7583"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "French Exit",
+            "artist": "TV Girl",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b273e1bc1af856b42dd7fdba9f84",
+            "artistimage": "https://i.scdn.co/image/ab67616d00001e0232f5fec7a879ed6ef28f0dfd",
+            "year": 2014,
+            "release": "Album",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Lovers Rock",
+                    "audio": "../audio/frenchexit/loversrock.mp3",
+                    "duration": "3:33",
+                    "artist": "TV Girl",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273e1bc1af856b42dd7fdba9f84"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Hatful of Hollow",
+            "artist": "The Smiths",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b273786b44c75ebf915866523f5b",
+            "artistimage": "https://i.scdn.co/image/ab67616d00001e0232f5fec7a879ed6ef28f0dfd",
+            "year": 1984,
+            "release": "Compilation",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Please, Please, Please, Let Me Get What I Want",
+                    "audio": "../audio/hatfulofhollow/pleasepleasepleaseletmegetwhatiwant.mp3",
+                    "duration": "1:52",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273786b44c75ebf915866523f5b"
+                },
+                {
+                    "id": 1,
+                    "title": "How Soon Is Now?",
+                    "audio": "../audio/hatfulofhollow/howsoonisnow.mp3",
+                    "duration": "6:48",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273786b44c75ebf915866523f5b"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Did you know that there's a tunnel under Ocean Blvd",
+            "artist": "Lana Del Rey",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b27359ae8cf65d498afdd5585634",
+            "artistimage": "https://i.scdn.co/image/ab6761610000e5ebb99cacf8acd5378206767261",
+            "year": 2023,
+            "release": "Album",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Let The Light In (feat. Father John Misty)",
+                    "audio": "../audio/didyouknowthattheresatunnelunderoceanblvd/letthelightin.mp3",
+                    "duration": "4:38",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27359ae8cf65d498afdd5585634"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Honeymoon",
+            "artist": "Lana Del Rey",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a",
+            "artistimage": "https://i.scdn.co/image/ab6761610000e5ebb99cacf8acd5378206767261",
+            "year": 2015,
+            "release": "Album",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Honeymoon",
+                    "audio": "../audio/honeymoon/honeymoon.mp3",
+                    "duration": "5:50",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 1,
+                    "title": "Music To Watch Boys To",
+                    "audio": "../audio/honeymoon/musictowatchboysto.mp3",
+                    "duration": "4:50",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 2,
+                    "title": "Terrence Loves You",
+                    "audio": "../audio/honeymoon/terrencelovesyou.mp3",
+                    "duration": "4:50",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 3,
+                    "title": "God Knows I Tried",
+                    "audio": "../audio/honeymoon/godknowsitried.mp3",
+                    "duration": "4:40",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 4,
+                    "title": "High By The Beach",
+                    "audio": "../audio/honeymoon/highbythebeach.mp3",
+                    "duration": "4:17",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 5,
+                    "title": "Freak",
+                    "audio": "../audio/honeymoon/freak.mp3",
+                    "duration": "4:55",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 6,
+                    "title": "Art Deco",
+                    "audio": "../audio/honeymoon/artdeco.mp3",
+                    "duration": "4:55",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 7,
+                    "title": "Burnt Norton - Interlude",
+                    "audio": "../audio/honeymoon/burntnortoninterlude.mp3",
+                    "duration": "1:21",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 8,
+                    "title": "Religion",
+                    "audio": "../audio/honeymoon/religion.mp3",
+                    "duration": "5:23",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 9,
+                    "title": "Salvatore",
+                    "audio": "../audio/honeymoon/salvatore.mp3",
+                    "duration": "4:41",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 10,
+                    "title": "The Blackest Day",
+                    "audio": "../audio/honeymoon/theblackestday.mp3",
+                    "duration": "6:05",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 11,
+                    "title": "24",
+                    "audio": "../audio/honeymoon/24.mp3",
+                    "duration": "4:55",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 12,
+                    "title": "Swan Song",
+                    "audio": "../audio/honeymoon/swansong.mp3",
+                    "duration": "5:23",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                },
+                {
+                    "id": 13,
+                    "title": "Don't Let Me Be Misunderstood",
+                    "audio": "../audio/honeymoon/dontletmebemisunderstood.mp3",
+                    "duration": "3:01",
+                    "artist": "Lana Del Rey",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "The Smiths",
+            "artist": "The Smiths",
+            "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f",
+            "artistimage": "https://i.scdn.co/image/ab67616d00001e0232f5fec7a879ed6ef28f0dfd",
+            "year": 1984,
+            "release": "Album",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Reel Around the Fountain",
+                    "audio": "../audio/thesmiths/reelaroundthefountain.mp3",
+                    "duration": "5:59",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 1,
+                    "title": "You've Got Everything Now",
+                    "audio": "../audio/thesmiths/youvegoteverythingnow.mp3",
+                    "duration": "3:59",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 2,
+                    "title": "Miserable Lie",
+                    "audio": "../audio/thesmiths/miserablelie.mp3",
+                    "duration": "4:27",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 3,
+                    "title": "Pretty Girls Make Graves",
+                    "audio": "../audio/thesmiths/prettygirlsmakegraves.mp3",
+                    "duration": "3:43",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 4,
+                    "title": "The Hand That Rocks the Cradle",
+                    "audio": "../audio/thesmiths/thehandthatrocksthecradle.mp3",
+                    "duration": "4:37",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 5,
+                    "title": "The Charming Man",
+                    "audio": "../audio/thesmiths/thecharmingman.mp3",
+                    "duration": "2:42",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 6,
+                    "title": "Still III",
+                    "audio": "../audio/thesmiths/stilliii.mp3",
+                    "duration": "3:21",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 7,
+                    "title": "Hand in Glove",
+                    "audio": "../audio/thesmiths/handinglove.mp3",
+                    "duration": "3:22",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 8,
+                    "title": "What Difference Does It Make?",
+                    "audio": "../audio/thesmiths/whatdifferencedoesitmake.mp3",
+                    "duration": "3:49",
+                    "artist":"The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 9,
+                    "title": "I Don't Owe You Anything",
+                    "audio": "../audio/thesmiths/idontoweyouanything",
+                    "duration": "4:04",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                },
+                {
+                    "id": 10,
+                    "title": "Suffer Little Children",
+                    "audio": "../audio/thesmiths/sufferlittlechildren.mp3",
+                    "duration": "5:30",
+                    "artist": "The Smiths",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a09b231129ab1cb1a6efc57f"
+                }
+            ]
+        }
+    ],
+    "playlists": [
+        {
+            "id": 0,
+            "title": "goodnight or whatever",
+            "image": "https://i.pinimg.com/564x/76/63/4c/76634c244018e2de6fa94d3e080d65c7.jpg",
+            "creator": "Vinnie",
+            "creatorimage": "https://i.pinimg.com/564x/eb/a5/01/eba50138670d41fa7be56aea706882a9.jpg",
+            "release": "Playlist",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "There Is A Light That Never Goes Out",
+                    "audio": "../audio/thequeenisdead/theresalightthatnevergoesout.mp3",
+                    "duration": "4:05",
+                    "artist": "The Smiths",
+                    "album": "The Queen Is Dead",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9"
+                },
+                {
+                    "id": 1,
+                    "title": "Back to the Old House",
+                    "audio": "../audio/louderthanbombs/backtotheoldhouse.mp3",
+                    "duration": "3:07",
+                    "artist": "The Smiths",
+                    "album": "Louder Than Bombs",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ed3953f8af1f764a146b7583"
+                },
+                {
+                    "id": 2,
+                    "title": "No. 1 Party Anthem",
+                    "audio": "../audio/am/no1partyanthem.mp3",
+                    "duration": "4:03",
+                    "artist": "Arctic Monkeys",
+                    "album": "AM",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+                },
+                {
+                    "id": 3,
+                    "title": "Heaven Knows I'm Miserable Now",
+                    "audio": "../audio/louderthanbombs/heavenknowsimmiserablenow.mp3",
+                    "duration": "3:36",
+                    "artist": "The Smiths",
+                    "album": "Louder Than Bombs",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273ed3953f8af1f764a146b7583"
+                },
+                {
+                    "id": 4,
+                    "title": "Lovers Rock",
+                    "audio": "../audio/frenchexit/loversrock.mp3",
+                    "duration": "3:34",
+                    "artist": "TV Girl",
+                    "album": "French Exit",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273e1bc1af856b42dd7fdba9f84"
+                },
+                {
+                    "id": 5,
+                    "title": "Honeymoon",
+                    "audio": "../audio/honeymoon/honeymoon.mp3",
+                    "duration": "5:50",
+                    "artist": "Lana Del Rey",
+                    "album": "Honeymoon",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "vibes",
+            "image": "https://i.pinimg.com/564x/fa/fd/df/fafddf014a0733f2cb4fd26957affd28.jpg",
+            "creator": "Vinnie",
+            "creatorimage": "https://i.pinimg.com/564x/eb/a5/01/eba50138670d41fa7be56aea706882a9.jpg",
+            "release": "Playlist",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Talk Too Much",
+                    "audio": "../audio/snowangel/talktoomuch.mp3",
+                    "duration": "3:16",
+                    "artist": "Reneé Rapp",
+                    "album": "Snow Angel",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b27308688d64d1b26bbee0e87857"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "kinda sad",
+            "image": "https://i.pinimg.com/736x/6a/c8/66/6ac866ddab6e1236e83ecbb5d2072576.jpg",
+            "creator": "Vinnie",
+            "creatorimage": "https://i.pinimg.com/564x/eb/a5/01/eba50138670d41fa7be56aea706882a9.jpg",
+            "release": "Playlist",
+            "songs": [
+                {
+                    "id": 0,
+                    "title": "Honeymoon",
+                    "audio": "../audio/honeymoon/honeymoon.mp3",
+                    "duration": "5:50",
+                    "artist": "Lana Del Rey",
+                    "album": "Honeymoon",
+                    "albumcover": "https://i.scdn.co/image/ab67616d0000b273a3b3f48ca81acacb3ad4ec8a"
+                }
+            ]
+        }
+    ],
+    "artists": [
+        {
+            "id": 0,
+            "name": "Reneé Rapp",
+            "image": "https://i.scdn.co/image/ab6761610000e5eb4aed33b212aa2368af8818bf",
+            "backdrop": "https://i.scdn.co/image/ab676186000010161b4c4f2b56284f06924f191e"
+        },
+        {
+            "id": 1,
+            "name": "The Smiths",
+            "image": "https://i.scdn.co/image/4bf08a9e6eea088b20d4092d1322bbd3f39ff9af",
+            "backdrop": "https://i.scdn.co/image/ab676186000010165feb2208189273d341392812"
+        },
+        {
+            "id": 2,
+            "name": "TV Girl",
+            "image": "https://i.scdn.co/image/ab67616d00001e0232f5fec7a879ed6ef28f0dfd",
+            "backdrop": "https://colorate.azurewebsites.net/SwatchColor/E82088"
+        },
+        {
+            "id": 3,
+            "name": "Arctic Monkeys",
+            "image": "https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f",
+            "backdrop": "https://i.scdn.co/image/ab67618600001016ef22c74e18c2002d4c1d6402"
+        },
+        {
+            "id": 4,
+            "name": "Lana Del Rey",
+            "image": "https://i.scdn.co/image/ab6761610000e5ebb99cacf8acd5378206767261",
+            "backdrop": "https://i.scdn.co/image/ab67618600001016adc556aaf75e626cb4a1a1be"
+        }
+    ]
+}

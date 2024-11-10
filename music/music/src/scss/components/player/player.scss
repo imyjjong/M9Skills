@@ -1,0 +1,116 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.player{
+    background: lighten(map-get(variables.$baseVars, "background"), 3%);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 8rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    &__current{
+        width: 25%;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        gap: 0.8rem;
+        height: 100%;
+        padding: 1rem;
+
+        &--image{
+            width: 6rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 0.4rem;
+        }
+        &--wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &--song{
+            font-size: 90%;
+            width: 85%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &--artist{
+            font-size: 80%;
+        }
+    }
+
+    &__wrapper{
+        width: 75%;
+        @include mixins.flexBox;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__controls{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 2rem;
+
+        &--rewind, &--forward{
+            background: none;
+            border: none;
+            color: map-get(variables.$baseVars, "color");
+            font-size: 90%;
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        &--play{
+            background: map-get(variables.$accentVars, "buttonBackground");
+            border: none;
+            @include mixins.flexBox;
+            font-size: 70%;
+            width: 3rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            
+            &:focus{
+                outline: none;
+            }
+    
+            &-icon{
+                color: map-get(variables.$baseVars, "background");
+            }
+        }
+    }
+
+    &__audio{
+        width: 100%;
+        height: 3rem;
+        @include mixins.flexBox;
+
+        &::-webkit-media-controls{
+            &-enclosure{
+                background: none;
+                border-radius: 0;
+                @include mixins.flexBox;
+            }
+            &-panel{
+                height: 50%;
+            }
+            &-play-button{
+                display: none;
+            }
+            &-current-time-display, &-time-remaining-display{
+                text-shadow: none;
+                color: map-get(variables.$baseVars, "color");
+            }
+        }
+    }
+}

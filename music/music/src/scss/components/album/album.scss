@@ -1,0 +1,231 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.album{
+    background: map-get(variables.$listVars, "background");
+    width: 100%;
+    @include mixins.flexBox;
+    flex-direction: column;
+    margin-bottom: 5.4rem;
+
+    &__heading{
+        width: 100%;
+        height: 30rem;
+        overflow: hidden;
+        position: relative;
+
+        &--background{
+            @include mixins.imageBackground;
+        }
+
+        &--wrapper{
+            position: absolute;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 4rem;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 4rem;
+        }
+        &--cover{
+            width: 23rem;
+            box-shadow: 0 0.4rem 2rem 0.1rem rgba(0, 0, 0, 0.4);
+            transition: 0.4s all;
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.02);
+            }
+        }
+        &--info{
+            height: 100%;
+            padding: 4rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+        }
+        &--release{
+            font-size: 75%;
+            font-weight: 600;
+        }
+        &--title{
+            font-size: 4vw;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        &--artist{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 0.8rem;
+            
+            &-image{
+                width: 3rem;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            &-wrapper{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 0.4rem;
+            }
+            &-name{
+                font-size: 85%;
+                color: map-get(variables.$baseVars, "color");
+                text-decoration: none;
+                font-weight: 600;
+
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+            &-middledot{
+                font-size: 120%;
+                font-weight: 600;
+                color: map-get(variables.$accentVars, "grey");
+            }
+            &-length{
+                font-size: 80%;
+                color: map-get(variables.$accentVars, "grey");
+                font-weight: 600;
+            }
+        }
+    }
+    &__controls{
+        width: 100%;
+        height: 10rem;
+        padding: 2rem 4rem;
+
+        &--play{
+            background: map-get(variables.$accentVars, "buttonBackground");
+            border: none;
+            width: 7rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            font-size: 120%;
+            @include mixins.flexBox;
+        }
+    }
+    &__list{
+        background: map-get(variables.$listVars, "background");
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 2rem;
+    }
+    &__song{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 1rem;
+        
+        &:hover{
+            background: lighten(map-get(variables.$listVars, "background"), 3%);
+        }
+        &:hover &--number-text{
+            background: lighten(map-get(variables.$listVars, "background"), 3%);
+        }
+
+        &--items{
+            color: map-get(variables.$accentVars, "grey");
+            font-size: 90%;
+            border-bottom: 0.1rem solid rgba(map-get(variables.$baseVars, "color"), 0.1);
+            margin-bottom: 1rem;
+
+            &:hover{
+                background: map-get(variables.$listVars, "background");
+            }
+        }
+
+        &--number{
+            width: 5%;
+            @include mixins.flexBox;
+            padding: 0 1rem;
+            font-weight: 600;
+            position: relative;
+            
+            &:hover &-text{
+                cursor: pointer;
+                opacity: 0;
+                z-index: -1000;
+            }
+
+            &-hashtag{
+                font-size: 80%;
+                color: map-get(variables.$accentVars, "grey");
+            }
+            &-text{
+                position: absolute;
+                background: map-get(variables.$listVars, "background");
+                font-size: 90%;
+                padding: 1rem;
+                color: map-get(variables.$accentVars, "grey");
+            }
+            &-play{
+                background: none;
+                border: none;
+                color: map-get(variables.$baseVars, "color");
+                
+                &-playing{
+                    background: map-get(variables.$listVars, "background");
+                    border: none;
+                    color: map-get(variables.$accentVars, "buttonBackground");
+                    position: absolute;
+                }
+            }
+        }
+        &--title{
+            width: 95%;
+            &-list{
+                font-size: 80%;
+                color: map-get(variables.$accentVars, "grey");
+                font-weight: 600;
+            }
+            &-text{
+                font-size: 80%;
+
+                &-playing{
+                    font-size: 80%;
+                    color: map-get(variables.$accentVars, "buttonBackground");
+                }
+            }
+            &-wrapper{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 0.4rem;
+            }
+            &-artist{
+                font-size: 70%;
+                color: map-get(variables.$accentVars, "grey");
+
+                &:hover{
+                    cursor: pointer;
+                    color: map-get(variables.$baseVars, "color");
+                    text-decoration: underline;
+                }
+            }
+        }
+        &--duration{
+            width: 5%;
+            font-size: 80%;
+            @include mixins.flexBox;
+            color: map-get(variables.$accentVars, "grey");
+            &-clock{
+                font-size: 100%;
+                color: map-get(variables.$accentVars, "grey");
+            }
+        }
+
+    }
+}

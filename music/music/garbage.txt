@@ -1,0 +1,505 @@
+const { playlistData } = useContext(DataContext);
+    const [playlist, setPlaylist] = useState(null);
+
+    useEffect(() => {
+        if(!playlistData || playlistData.length === 0){
+            return;
+        }
+        setPlaylist(playlistData.find((playlists) => playlists.id === parseInt(id)) ?? null);
+    }, [playlistData, id]);
+    console.log(id);
+    return(
+        <>
+            <h2>{playlist.id}</h2>
+        </>
+    );
+
+
+    import { useContext, useEffect, useRef, useState } from "react";
+import DataContext from "../../hooks/context/DataContext";
+
+function Player({setCurrentPage}){
+    const [isPlaying, setIsPlaying] = useState(false);
+    function pageLink(page){
+        setCurrentPage(page)
+    }
+    const {currentSong} = useContext(DataContext);
+    const audioRef = useRef(null);
+    useEffect(() => {
+        if(audioRef.current && currentSong){
+            audioRef.current.src = currentSong.getSong;
+            audioRef.current.play();
+            setIsPlaying(true);
+        }
+    }, [currentSong]);
+
+    function rewindButton(){
+        if(audioRef){
+            audioRef.current.currentTime -= 5;
+        }
+    }
+    function playButton(){
+        if(audioRef){
+          if(audioRef.current.paused){
+            audioRef.current.play();
+            setIsPlaying(true);
+          }
+          else{
+            audioRef.current.pause();
+            setIsPlaying(false);
+          }
+        }
+    }
+    function forwardButton(){
+        if(audioRef){
+            audioRef.current.currentTime += 5;
+        }
+    }
+    function songended(get){
+        console.log(audioRef);
+        console.log(get.currentSong.getId);
+        setIsPlaying(false);
+    }
+    return(
+        <div className="player">
+            <div className="player__current">
+                <img src={currentSong?.getImage || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BhBgvAdx2cQwiyvb-89VbGVzgQbB983tfw&s"} alt={currentSong?.getTitle || "placeholder image"} className="player__current--image" />
+                <span className="player__current--wrapper">
+                    <p onClick={() => {pageLink('album')}} className="player__current--song">
+                        {currentSong?.getTitle || ""}
+                    </p>
+                    <p className="player__current--artist">
+                        {currentSong?.getArtist || ""}
+                    </p>
+                </span>
+            </div>
+            <div className="player__wrapper">
+                <span className="player__controls">
+                    <button onClick={rewindButton} className="player__controls--rewind">
+                        <i className="fa-solid fa-backward player__controls--rewind-icon"></i>
+                        </button>
+                    <button onClick={playButton} className="player__controls--play">
+                        <i className={isPlaying ? 'fa-solid fa-pause player__controls--play-icon' : 'fa-solid fa-play player__controls--play-icon'}></i>
+                    </button>
+                    <button onClick={forwardButton} className="player__controls--forward">
+                        <i className="fa-solid fa-forward player__controls--forward-icon"></i>
+                        </button>
+                </span>
+                <audio ref={audioRef} onEnded={() => {songended({currentSong})}} autoPlay controls controlsList="nodownload noplaybackrate" className="player__audio"></audio>
+            </div>
+        </div>
+    );
+}
+export function Play(props){
+    const { setCurrentSong } = useContext(DataContext);
+    
+    function playSong(){
+        setCurrentSong({
+            getId: props.getId,
+            getSong: props.getSong,
+            getImage: props.getImage,
+            getAlbum: props.getAlbum,
+            getTitle: props.getTitle,
+            getArtist: props.getArtist
+        });
+    }
+    return(
+        <>
+            <button className={props.class} onClick={playSong}>{props.children}</button>
+        </>
+    );
+}
+
+export default Player;
+
+import { useContext, useEffect, useRef, useState } from "react";
+import DataContext from "../../hooks/context/DataContext";
+
+function Player(){
+    const {data, currentSong} = useContext(DataContext);
+    const [song, setSong] = useState([]);
+    const [index, setIndex] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRef = useRef(null);
+
+    useEffect(() => {
+        if(audioRef.current && currentSong){
+            console.log(data[currentSong.getAlbum])
+            // setSong(albumData.filter(albums => albums.title === currentSong.getAlbum)?.[0]?.songs) || [];
+            setIndex(song.findIndex(song => song.id === currentSong.getId)) ?? null;
+        }
+    }, [currentSong, index]);
+    console.log(currentSong);
+    console.log(index);
+
+    useEffect(() => {
+        if(audioRef.current && currentSong){
+            audioRef.current.src = song[index].audio;
+        }
+    })
+    return(
+        <div className="player">
+            <div className="player__current">
+                <img src={currentSong?.getImage || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BhBgvAdx2cQwiyvb-89VbGVzgQbB983tfw&s"} alt={currentSong?.getTitle || "placeholder image"} className="player__current--image" />
+                <span className="player__current--wrapper">
+                    <p className="player__current--song">
+                        
+                    </p>
+                    <p className="player__current--artist">
+                        
+                    </p>
+                </span>
+            </div>
+            <div className="player__wrapper">
+                <audio ref={audioRef} onEnded={() => {songended({currentSong})}} autoPlay controls controlsList="nodownload noplaybackrate" className="player__audio"></audio>
+            </div>
+        </div>
+    );
+}
+
+export function Play(props){
+    const { setCurrentSong } = useContext(DataContext);
+
+    function playSong(){
+        setCurrentSong({
+            getId: props.getId,
+            getAlbum: props.getAlbum,
+            getTitle: props.getTitle
+        });
+    }
+    return(
+        <>
+            <button className={props.class} onClick={playSong}>{props.children}</button>
+        </>
+    );
+}
+
+export default Player;
+
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+@use "../../abstracts/animations";
+
+.home{
+    padding: 2rem;
+    width: 100%;
+    min-height: 86vh;
+    background: map-get(variables.$baseVars, "accent");
+    border-radius: 1rem;
+    padding-bottom: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+
+        &--wrapper{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+
+    &__artists{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+        background: yellow;
+
+        &--wrapper{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 2rem;
+            overflow: hidden;
+            overflow-x: scroll;
+            background: red;
+
+            &::-webkit-scrollbar{
+            }
+        }
+    }
+    &__artist{
+        width: 18rem;
+        background: blue;
+
+        &--image{
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    &__albums{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+
+        &--wrapper{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 2rem;
+            width: 100%;
+            overflow: hidden;
+            overflow-x: scroll;
+            background: red;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+    &__album{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 0.4rem;
+        width: 15rem;
+
+        &:hover{
+            cursor: pointer;
+            background: lighten(map-get(variables.$baseVars, "background"), 4%);
+        }
+
+        &--image{
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        &--info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 0.4rem;
+            padding: 0.4rem;
+            &-title{
+                font-size: 80%;
+                font-weight: 600;
+            }
+            &-artist{
+                font-size: 70%;
+            }
+        }
+    }
+}
+
+.song{
+    padding: 1.4rem 1.4rem 2rem 1.4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    width: 24rem;
+
+    &:hover{
+        background: lighten(map-get(variables.$baseVars, "background"), 4%);
+    }
+
+    &__figure{
+        position: relative;
+        &:hover{
+            cursor: pointer;
+        }
+        &:hover &--button{
+            cursor: pointer;
+            @include animations.buttonPopup;
+        }
+        &:hover &--button-playing{
+            cursor: pointer;
+            @include animations.buttonPopup;
+        }
+        &--image{
+            width: 21rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+        &--button{
+            @include mixins.playButton;
+
+            &-playing{
+                @include mixins.playButton;
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+
+        &--title{
+            font-size: 90%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 100%;
+            overflow: hidden;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &--artist{
+            font-size: 75%;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+            <section className="home">
+                <div className="home__list">
+                    <h2 className="home__list--title">Songs</h2>
+                    <span className="home__list--wrapper">
+                        {dataSets}
+                    </span>
+                </div>
+                <div className="home__artists">
+                    <h2 className="home__artists--title">Artists</h2>
+                    <span className="home__artists--wrapper">
+                        {artistSets}
+                    </span>
+                </div>
+                <div className="home__albums">
+                    <h2 className="home__albums--title">Albums</h2>
+                    <span className="home__albums--wrapper">
+                        {albumSets}
+                    </span>
+                </div>
+            </section>
+
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BhBgvAdx2cQwiyvb-89VbGVzgQbB983tfw&s"
+
+import { useContext, useEffect, useRef, useState } from "react";
+import DataContext from "../../hooks/context/DataContext";
+
+function Player({setCurrentPage, setSpecifyPage}){
+    const {currentSong, isPlaying, setIsPlaying} = useContext(DataContext);
+    const audioRef = useRef(null);
+    function pageLink(page){
+        setCurrentPage(page)
+    }
+    function pageLink(page, id){
+        setSpecifyPage(id);
+        setCurrentPage(page);
+    }
+    useEffect(() => {
+        if(audioRef.current && currentSong){
+            audioRef.current.src = currentSong.getSong;
+            audioRef.current.play();
+            setIsPlaying(true);
+        }
+    }, [currentSong]);
+
+    function rewindButton(){
+        if(audioRef){
+            audioRef.current.currentTime -= 5;
+        }
+    }
+    function playButton(){
+        if(audioRef){
+          if(audioRef.current.paused){
+            audioRef.current.play();
+            setIsPlaying(true);
+          }
+          else{
+            audioRef.current.pause();
+            setIsPlaying(false);
+          }
+        }
+    }
+    function forwardButton(){
+        if(audioRef){
+            audioRef.current.currentTime += 5;
+        }
+    }
+    function songended(get){
+        console.log(audioRef);
+        console.log(get.currentSong.getId);
+        setIsPlaying(false);
+    }
+    return(
+        <div className="player">
+            <div className="player__current">
+                <img src={currentSong?.getImage || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BhBgvAdx2cQwiyvb-89VbGVzgQbB983tfw&s"} alt={currentSong?.getTitle || "placeholder image"} className="player__current--image" />
+                <span className="player__current--wrapper">
+                    <p onClick={() => {pageLink('album', currentSong?.getAlbum)}} className="player__current--song">
+                        {currentSong?.getTitle || ""}
+                    </p>
+                    <p onClick={() => {pageLink('artist', currentSong?.getArtist)}} className="player__current--artist">
+                        {currentSong?.getArtist || ""}
+                    </p>
+                </span>
+            </div>
+            <div className="player__wrapper">
+                <span className="player__controls">
+                    <button onClick={rewindButton} className="player__controls--rewind">
+                        <i className="fa-solid fa-backward player__controls--rewind-icon"></i>
+                        </button>
+                    <button onClick={playButton} className="player__controls--play">
+                        <i className={isPlaying ? 'fa-solid fa-pause player__controls--play-icon' : 'fa-solid fa-play player__controls--play-icon'}></i>
+                    </button>
+                    <button onClick={forwardButton} className="player__controls--forward">
+                        <i className="fa-solid fa-forward player__controls--forward-icon"></i>
+                        </button>
+                </span>
+                <audio ref={audioRef} onEnded={() => {songended({currentSong})}} autoPlay controls controlsList="nodownload noplaybackrate" className="player__audio"></audio>
+            </div>
+        </div>
+    );
+}
+export function Play(props){
+    const { currentSong, setCurrentSong, isPlaying } = useContext(DataContext);
+    console.log(isPlaying);
+    function playSong(){
+        setCurrentSong({
+            getId: props.getId,
+            getSong: props.getSong,
+            getImage: props.getImage,
+            getAlbum: props.getAlbum,
+            getTitle: props.getTitle,
+            getArtist: props.getArtist
+        });
+    }
+    const isSongPlaying = currentSong?.getTitle === props.getTitle && isPlaying;
+    return(
+        <>
+            <button className={`${props.class}${isSongPlaying ? '-playing' : ''}`} onClick={playSong}>
+                <i className={`${isSongPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play'}`}></i>
+            </button>
+        </>
+    );
+}
+
+export default Player;
+
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BhBgvAdx2cQwiyvb-89VbGVzgQbB983tfw&s"

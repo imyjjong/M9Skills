@@ -1,0 +1,214 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+@use "../../abstracts/animations";
+
+.home{
+    padding: 2rem;
+    width: 100%;
+    min-height: 86vh;
+    background: map-get(variables.$baseVars, "accent");
+    border-radius: 1rem;
+    padding-bottom: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+
+        &--wrapper{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+
+    &__artists{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+
+        &--wrapper{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            overflow: hidden;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+    &__artist{
+        width: 18rem;
+
+        &--image{
+            width: 18rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    &__albums{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+
+        &--wrapper{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 2rem;
+            width: 100%;
+            overflow: hidden;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+    &__album{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 0.4rem;
+        flex-shrink: 0;
+        width: 15rem;
+
+        &:hover{
+            cursor: pointer;
+            background: lighten(map-get(variables.$baseVars, "background"), 4%);
+        }
+
+        &--image{
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        &--info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 0.4rem;
+            padding: 0.4rem;
+            &-title{
+                font-size: 80%;
+                font-weight: 600;
+            }
+            &-artist{
+                font-size: 70%;
+            }
+        }
+    }
+}
+
+.song{
+    padding: 1.4rem 1.4rem 2rem 1.4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    width: 24rem;
+
+    &:hover{
+        background: lighten(map-get(variables.$baseVars, "background"), 4%);
+    }
+
+    &__figure{
+        position: relative;
+        &:hover{
+            cursor: pointer;
+        }
+        &:hover &--button{
+            cursor: pointer;
+            @include animations.buttonPopup;
+        }
+        &:hover &--button-playing{
+            cursor: pointer;
+            @include animations.buttonPopup;
+        }
+        &--image{
+            width: 21rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+        &--button{
+            @include mixins.playButton;
+
+            &-playing{
+                @include mixins.playButton;
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+        overflow: hidden;
+
+        &--title{
+            font-size: 90%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 100%;
+            overflow: hidden;
+
+            &:hover{
+                cursor: pointer;
+                @include animations.titleOverflow;
+            }
+
+            &-playing{
+                font-size: 90%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 100%;
+                overflow: hidden;
+                color: map-get(variables.$accentVars, "buttonBackground");  
+
+                &:hover{
+                    cursor: pointer;
+                    @include animations.titleOverflow;
+                }
+            }
+        }
+        &--artist{
+            font-size: 75%;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

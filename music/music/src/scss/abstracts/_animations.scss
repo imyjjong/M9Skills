@@ -1,0 +1,33 @@
+@keyframes buttonPopup{
+    from{
+        opacity: 0;
+        bottom: 2%;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@mixin buttonPopup{
+    animation-name: buttonPopup;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes titleOverflow{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-150%);
+    }
+}
+
+@mixin titleOverflow{
+    animation-name: titleOverflow;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    text-overflow: unset;
+    overflow: visible;
+}
