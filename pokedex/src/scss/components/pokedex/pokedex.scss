@@ -1,0 +1,133 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.pokedex{
+    background: map-get(variables.$pokedexVars, "background");
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    @include mixins.flexBox;
+    flex-direction: column;
+
+    &__search{
+        width: 100%;
+        height: 10%;
+        @include mixins.flexBox;
+        background: pink;
+
+        &--input{
+            border-radius: 2rem;
+            padding: 1rem 2rem;
+            width: 40rem;
+            border: none;
+            background: rgb(247, 213, 219);
+            font-size: 100%;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+        height: 90%;
+    }
+
+    &__info{
+        width: 25%;
+        height: 100%;
+        padding: 2rem;
+        @include mixins.flexBox;
+        flex-direction: column;
+        gap: 2rem;
+
+        &--figure{
+            width: 28rem;
+            aspect-ratio: 1/1;
+            @include mixins.flexBox;
+            border: 0.1rem solid grey;
+            border-radius: 4rem;
+
+            &-image{
+                width: 80%;
+                object-fit: contain;
+            }
+        }
+        &--wrapper{
+            width: 100%;
+            @include mixins.flexBox;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        &--name{
+            width: 100%;
+            @include mixins.flexBox;
+            font-size: 160%;
+        }
+        &--types{
+            @include mixins.flexBox;
+            gap: 1rem;
+        }
+        &--type{
+            background: purple;
+            padding: 0.6rem 2rem;
+            border-radius: 2rem;
+            @include mixins.flexBox;
+            color: white;
+        }
+    }
+    &__stats{
+        width: 35%;
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2rem;
+
+        &--list{
+            overflow: hidden;
+            overflow-y: scroll;
+            height: 70%;
+            width: 100%;
+        }
+        &--item{
+            width: 100%;
+            border-bottom: 0.1rem solid grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
+    &__moves{
+        width: 40%;
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2rem;
+
+        &--list{
+            overflow: hidden;
+            overflow-y: scroll;
+            height: 70%;
+            width: 100%;
+        }
+        &--item{
+            width: 100%;
+            border-bottom: 0.1rem solid grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
+}
