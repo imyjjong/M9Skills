@@ -9,7 +9,7 @@ function Search(){
     }
     return(
         <form onSubmit={(event) => {searchPokemon(event)}} className="pokedex__search">
-            <input type="text" className="pokedex__search--input" />
+            <input type="text" className="pokedex__search--input" placeholder="Enter Pokémon name or id"/>
         </form>
     );
 }
