@@ -22,14 +22,20 @@ function Daily(){
         }
     }, [data]);
     
-    const dailySets = days?.map(day => {
+    const dailySets = days?.map((day, index) => {
         const date = new Date(day.dt * 1000).toLocaleDateString("en-US", {weekday: "short"});
-        console.log(date);
 
         return(
-            <article className="weather__day">
-                {date}
-                {(day.main.temp - 273.15).toFixed(1)}
+            <article className="weather__day" key={index}>
+                <span className="weather__day--date">
+                    {date}
+                </span>
+                <span className="weather__day--wrapper">
+                    <i className="fa-solid fa-cloud weather__day--icon"/>
+                </span>
+                <span className="weather__day--temp">
+                    {(day.main.temp - 273.15).toFixed(1)}
+                </span>
             </article>
         );
     });
@@ -42,12 +48,3 @@ function Daily(){
 }
 
 export default Daily;
-
-// const [oldDate, setOldDate] = useState(null);
-// const filterDaily = data.list?.filter((value) => {
-//     const date = new Date(value.dt * 1000).toLocaleDateString();
-//     if(date !== oldDate){
-//         console.log(date);
-//         setOldDate(date);
-//     }
-// })
