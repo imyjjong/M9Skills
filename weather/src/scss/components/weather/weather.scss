@@ -1,0 +1,13 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.weather{
+    background: map-get(variables.$weatherVars, "dashboardBackground");
+    width: 100%;
+    height: 100%;
+
+    &__heading{
+        background: red;
+        @include mixins.flexBox;
+    }
+}
