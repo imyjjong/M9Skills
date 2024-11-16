@@ -126,20 +126,28 @@ body {
   font-weight: 600;
   margin-top: 0.8rem;
 }
-.weather__heading--icon {
+.weather__heading--details {
   width: 60%;
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  font-size: 700%;
+  flex-direction: column;
+  gap: 2rem;
   color: white;
+}
+.weather__heading--details-icon {
+  font-size: 800%;
+}
+.weather__heading--details-time {
+  font-size: 180%;
 }
 .weather__week {
   padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   height: 50%;
 }
@@ -180,6 +188,22 @@ body {
   align-items: center;
   font-weight: 600;
   font-size: 110%;
+}
+.weather__error {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 3rem;
+  color: #7070bf;
+}
+.weather__error--message {
+  font-size: 180%;
+}
+.weather__error--icon {
+  font-size: 1100%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -62,14 +62,20 @@
                 margin-top: 0.8rem;
             }
         }
-        &--icon{
+        &--details{
             width: 60%;
             height: 100%;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            font-size: 700%;
-            color: white;
+            @include mixins.flexBox;
+            flex-direction: column;
+            gap: 2rem;
+            color: map-get(variables.$weatherVars, "cloud");
+
+            &-icon{
+                font-size: 800%;
+            }
+            &-time{
+                font-size: 180%;
+            }
         }
     }
     &__week{
@@ -77,6 +83,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 2rem;
         height: 50%;
     }
@@ -111,6 +118,23 @@
             @include mixins.flexBox;
             font-weight: 600;
             font-size: 110%;
+        }
+    }
+    &__error{
+        width: 100%;
+        height: 90%;
+        @include mixins.flexBox;
+        flex-direction: column-reverse;
+        gap: 3rem;
+        color: darken(map-get(variables.$weatherVars, "background"), 10%);
+
+        &--message{
+            font-size: 180%;
+
+        }
+
+        &--icon{
+            font-size: 1100%;
         }
     }
 }

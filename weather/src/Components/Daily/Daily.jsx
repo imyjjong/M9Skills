@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../../hooks/context/DataContext";
+import Icon from "../Icon/Icon";
 
 function Daily(){
     const {data} = useContext(DataContext);
@@ -22,19 +23,20 @@ function Daily(){
         }
     }, [data]);
     
-    const dailySets = days?.map((day, index) => {
+    const dailySets = days?.slice(1).map((day, index) => {
         const date = new Date(day.dt * 1000).toLocaleDateString("en-US", {weekday: "short"});
+        const getIcon = Icon(day.weather[0].icon);
 
         return(
             <article className="weather__day" key={index}>
                 <span className="weather__day--date">
                     {date}
                 </span>
-                <span className="weather__day--wrapper">
-                    <i className="fa-solid fa-cloud weather__day--icon"/>
+                <span className="weather__day--wrapper" title={day.weather[0].description}>
+                    <i className={`${getIcon} weather__day--icon`}/>
                 </span>
                 <span className="weather__day--temp">
-                    {(day.main.temp - 273.15).toFixed(1)}
+                    {(day.main.temp - 273.15).toFixed(1)}°C
                 </span>
             </article>
         );

@@ -1,15 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import DataContext from "../../hooks/context/DataContext";
 
 function Header(){
     const {id, setId} = useContext(DataContext);
+    const [time, setTime] = useState();
     function searchLocation(event){
         event.preventDefault();
         console.log(id);
-        console.log(event.target.children[0].value);
         setId(event.target.children[0].value);
     }
-    const time = String(new Date().getHours()) + ":" + new Date().getMinutes();
+    useEffect(() => {
+        setInterval(() => {
+            setTime(new Date().toLocaleTimeString('en-UK', {timeStyle: 'short'}))
+        }, 1000);
+    });
     return(
         <header className="header">
             <div className="header__logo">

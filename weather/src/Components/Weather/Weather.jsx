@@ -2,9 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import DataContext from "../../hooks/context/DataContext";
 import Header from "../Header/Header";
 import Daily from "../Daily/Daily";
+import Icon from "../Icon/Icon";
 
 function Weather(){
     const { data, id } = useContext(DataContext);
+    const [locationTime, setLocationTime] = useState();
 
     useEffect(() => {
         if(id){
@@ -18,9 +20,23 @@ function Weather(){
         }
     }, [data]);
 
-    if(data.length!=0){
-        console.log(data.list[0].main.temp - 273.15);
-        console.log(new Date(data.list[0].dt * 1000).toLocaleDateString());
+    useEffect(() => {
+        if(data.length!=0 && data.cod === '200'){    
+            const updateTime = () => {
+                const getTime = new Date().getTime() + (data.city.timezone * 1000 - 3600000);
+                setLocationTime(new Date(getTime).toLocaleTimeString('en-UK', {timeStyle: 'short'}))
+            }
+
+            updateTime();
+
+            const interval = setInterval(updateTime, 1000);
+
+            return() => clearInterval(interval);
+        }
+    }, [data]);
+
+    if(data.length!=0 && data.cod === '200'){
+        const getIcon = Icon(data.list[0].weather[0].icon);
         
         return(
             <section className="weather">
@@ -33,11 +49,11 @@ function Weather(){
                     <span className="weather__heading--riseset">
                         <h3 className="weather__heading--riseset-item">
                             <i className="fa-solid fa-circle weather__heading--riseset-sun"/>
-                         {new Date(data.city.sunrise * 1000).toLocaleTimeString("en-UK", {hour: '2-digit', minute: '2-digit'})}
+                         {new Date((data.city.sunrise + data.city.timezone - 3600) * 1000).toLocaleTimeString("en-UK", {hour: '2-digit', minute: '2-digit'})}
                         </h3>
                         <h3 className="weather__heading--riseset-item">
                             <i className="fa-solid fa-moon weather__heading--riseset-moon"/>
-                         {new Date(data.city.sunset * 1000).toLocaleTimeString("en-UK", {hour: '2-digit', minute: '2-digit'})}
+                         {new Date((data.city.sunset + data.city.timezone - 3600) * 1000).toLocaleTimeString("en-UK", {hour: '2-digit', minute: '2-digit'})}
                         </h3>
                     </span>
                     <span className="weather__heading--temperature">
@@ -47,8 +63,11 @@ function Weather(){
                         <p className="weather__heading--temperature-celsius">°C</p>
                     </span>
                     </span>
-                    <span className="weather__heading--icon">
-                        <i className="fa-solid fa-cloud weather__heading--icon-item"/>
+                    <span className="weather__heading--details" title={data.list[0].weather[0].description}>
+                        <i className={`${getIcon} weather__heading--details-icon`}/>
+                        <article className="weather__heading--details-time">
+                            {locationTime}
+                        </article>
                     </span>
                 </div>
                 <div className="weather__week">
@@ -58,11 +77,15 @@ function Weather(){
         );
     }
     else{
-        console.log(data);
         return(
             <section className="weather">
-                <h2>couldnt find city</h2>
                 <Header/>
+                <div className="weather__error">
+                    <h3 className="weather__error--message">
+                        can't find {id}
+                    </h3>
+                    <i className="fa-solid fa-magnifying-glass weather__error--icon"></i>
+                </div>
             </section>
         );
     }
