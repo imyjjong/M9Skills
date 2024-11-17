@@ -6,19 +6,8 @@ import Icon from "../Icon/Icon";
 
 function Weather(){
     const { data, id } = useContext(DataContext);
-    const [locationTime, setLocationTime] = useState();
-
-    useEffect(() => {
-        if(id){
-            return;
-        }
-    }, [id]);
-
-    useEffect(() => {
-        if(data.length != 0){
-            return;
-        }
-    }, [data]);
+    const [locationTime, setLocationTime] = useState(null);
+    const [darkmode, setDarkmode] = useState(false);
 
     useEffect(() => {
         if(data.length!=0 && data.cod === '200'){    
@@ -35,11 +24,41 @@ function Weather(){
         }
     }, [data]);
 
+    useEffect(() => {
+        if(data.length!=0 && data.cod === '200'){
+            const currentTime = new Date().getTime();
+            const sunrise = data.city.sunrise * 1000;
+            const sunset = data.city.sunset * 1000;
+
+            if(currentTime > sunrise && currentTime < sunset){
+                setDarkmode(false);
+            }
+            else{
+                setDarkmode(true);
+            }
+            return;
+        }
+    }, [data]);
+
+    useEffect(() => {
+        const themeElements = document.querySelectorAll(".lightmode");
+        themeElements.forEach((themeElement) => {
+            if(darkmode === true){
+                themeElement.classList.add("darkmode");
+                console.log(themeElement);
+            }
+            else{
+                themeElement.classList.remove("darkmode");
+                console.log(themeElement);
+            }
+        })
+    });
+
     if(data.length!=0 && data.cod === '200'){
         const getIcon = Icon(data.list[0].weather[0].icon);
         
         return(
-            <section className="weather">
+            <section className="weather lightmode">
                 <Header/>
                 <div className="weather__heading">
                     <span className="weather__heading--wrapper">
@@ -78,9 +97,9 @@ function Weather(){
     }
     else{
         return(
-            <section className="weather">
+            <section className="weather lightmode">
                 <Header/>
-                <div className="weather__error">
+                <div className="weather__error lightmode">
                     <h3 className="weather__error--message">
                         can't find {id}
                     </h3>

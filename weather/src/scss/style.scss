@@ -2,3 +2,5 @@
 @use "abstracts/base";
 @use "components/header/header.scss";
 @use "components/weather/weather.scss";
+@use "abstracts/darkmode";
+@use "abstracts/mediaqueries";

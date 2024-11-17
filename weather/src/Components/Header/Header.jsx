@@ -20,7 +20,7 @@ function Header(){
                 Weather
             </div>
             <form onSubmit={(event) => {searchLocation(event)}} className="header__search">
-                <input type="text" className="header__search--input" placeholder="Enter a city name" />
+                <input type="text" className="header__search--input lightmode" placeholder="Enter a city name" />
             </form>
             <div className="header__time">
                 {time}

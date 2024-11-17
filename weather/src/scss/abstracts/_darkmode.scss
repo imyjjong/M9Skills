@@ -1,0 +1,28 @@
+@use "variables";
+
+.darkmode{
+    background: map-get(variables.$darkmodeVars, "background");
+    color: map-get(variables.$darkmodeVars, "color");
+}
+.header__search--input{
+    &.darkmode{
+    background: lighten(map-get(variables.$darkmodeVars, "weatherBackground"), 5%);
+}}
+
+.weather{ 
+    &.darkmode{
+    background: map-get(variables.$darkmodeVars, "weatherBackground");
+    }
+}
+
+
+.weather__day{
+    &.darkmode{
+        background: lighten(map-get(variables.$darkmodeVars, "weatherBackground"), 4%);
+    }
+}
+.weather__error{ 
+    &.darkmode{
+        color: darken(map-get(variables.$darkmodeVars, "weatherBackground"), 4%);
+    }
+}

@@ -75,15 +75,15 @@ body {
 }
 .weather__heading {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 10rem;
   height: 40%;
   width: 100%;
-  padding: 2rem 30rem;
+  padding: 2rem 35rem;
 }
 .weather__heading--wrapper {
   height: 100%;
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,7 +127,6 @@ body {
   margin-top: 0.8rem;
 }
 .weather__heading--details {
-  width: 60%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -150,6 +149,7 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   height: 50%;
+  width: 100%;
 }
 .weather__day {
   border-radius: 2rem;
@@ -204,6 +204,126 @@ body {
 }
 .weather__error--icon {
   font-size: 1100%;
+}
+
+.darkmode {
+  background: #070F2B;
+  color: white;
+}
+
+.header__search--input.darkmode {
+  background: #0b1741;
+}
+
+.weather.darkmode {
+  background: #070F2B;
+}
+
+.weather__day.darkmode {
+  background: #0a153d;
+}
+
+.weather__error.darkmode {
+  color: #040919;
+}
+
+@media screen and (max-width: 69rem) {
+  .weather__heading {
+    gap: 0;
+    padding: 2rem 22rem;
+  }
+}
+@media screen and (max-width: 62.5rem) {
+  .weather__day {
+    width: 18rem;
+  }
+}
+@media screen and (max-width: 55rem) {
+  .weather__heading {
+    justify-content: center;
+    gap: 4rem;
+  }
+  .weather__week {
+    padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main {
+    padding: 0;
+  }
+  .weather {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__time {
+    display: none;
+  }
+}
+@media screen and (max-width: 44rem) {
+  .weather__week {
+    height: auto;
+  }
+  .weather__day {
+    width: 15rem;
+  }
+}
+@media screen and (max-width: 36rem) {
+  body {
+    margin-bottom: 20rem;
+  }
+  .weather__week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .weather__day {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    aspect-ratio: 0;
+  }
+}
+@media screen and (max-width: 32.5rem) {
+  .header {
+    padding: 0 2rem;
+  }
+  .header__search {
+    width: 100%;
+  }
+  .weather__heading {
+    padding: 5rem;
+    gap: 0;
+    height: auto;
+  }
+  .weather__heading--wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .weather__heading--riseset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .weather__heading--riseset-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .weather__heading--details {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

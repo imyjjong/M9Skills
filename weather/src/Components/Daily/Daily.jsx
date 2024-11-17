@@ -28,7 +28,7 @@ function Daily(){
         const getIcon = Icon(day.weather[0].icon);
 
         return(
-            <article className="weather__day" key={index}>
+            <article className="weather__day lightmode" key={index}>
                 <span className="weather__day--date">
                     {date}
                 </span>
