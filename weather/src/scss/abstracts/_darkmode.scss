@@ -17,6 +17,7 @@
 
 
 .weather__day{
+    
     &.darkmode{
         background: lighten(map-get(variables.$darkmodeVars, "weatherBackground"), 4%);
     }

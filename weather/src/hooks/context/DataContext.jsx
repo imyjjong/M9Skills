@@ -15,7 +15,6 @@ function WeatherDataProvider({children}){
             })
         })();
     }, [id]);
-    console.log(id);
     return(
         <DataContext.Provider value={{data, id, setId}}>
             {children}

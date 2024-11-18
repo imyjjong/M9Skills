@@ -19,26 +19,35 @@ function Weather(){
             updateTime();
 
             const interval = setInterval(updateTime, 1000);
-
-            return() => clearInterval(interval);
-        }
-    }, [data]);
-
-    useEffect(() => {
-        if(data.length!=0 && data.cod === '200'){
             const currentTime = new Date().getTime();
             const sunrise = data.city.sunrise * 1000;
             const sunset = data.city.sunset * 1000;
 
-            if(currentTime > sunrise && currentTime < sunset){
+            if(currentTime >= sunrise && currentTime < sunset){
                 setDarkmode(false);
             }
             else{
                 setDarkmode(true);
             }
-            return;
+            return() => clearInterval(interval);
         }
     }, [data]);
+
+    // useEffect(() => {
+    //     if(data.length!=0 && data.cod === '200'){
+    //         const currentTime = new Date().getTime();
+    //         const sunrise = data.city.sunrise * 1000;
+    //         const sunset = data.city.sunset * 1000;
+
+    //         if(currentTime > sunrise && currentTime < sunset){
+    //             setDarkmode(false);
+    //         }
+    //         else{
+    //             setDarkmode(true);
+    //         }
+    //         return;
+    //     }
+    // }, [data]);
 
     useEffect(() => {
         const themeElements = document.querySelectorAll(".lightmode");
